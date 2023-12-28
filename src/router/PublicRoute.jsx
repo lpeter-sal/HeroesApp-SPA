@@ -10,5 +10,5 @@ export const PublicRoute = ({ children }) => {
 
     return (!logged)
     ? children
-    : <Navigate to="/HeroesApp-SPA/marvel" />
+    : <Navigate to="./marvel" />
 }

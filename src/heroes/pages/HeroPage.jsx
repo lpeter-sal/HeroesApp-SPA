@@ -20,7 +20,7 @@ export const HeroPage = () => {
   
 
   if( !hero ) {
-    return <Navigate to="/HeroesApp-SPA/marvel" />
+    return <Navigate to="./marvel" />
   }
 
   return (

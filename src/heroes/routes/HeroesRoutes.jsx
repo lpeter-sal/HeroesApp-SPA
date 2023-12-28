@@ -11,13 +11,13 @@ export const HeroesRoutes = () => {
         <div className="container">
 
           <Routes>
-              <Route path="/HeroesApp-SPA/marvel" element={ <MarvelPage />} />
-              <Route path="/HeroesApp-SPA/dc" element={ <DcPage />} />
+              <Route path="marvel" element={ <MarvelPage />} />
+              <Route path="dc" element={ <DcPage />} />
 
-              <Route path="/HeroesApp-SPA/search" element={ <SearchPage />} />
-              <Route path="/HeroesApp-SPA/hero/:id" element={ <HeroPage />} />
+              <Route path="search" element={ <SearchPage />} />
+              <Route path="hero/:id" element={ <HeroPage />} />
 
-              <Route path="/HeroesApp-SPA/" element={ <Navigate to="/HeroesApp-SPA/marvel" />} />
+              <Route path="./" element={ <Navigate to="/marvel" />} />
 
           </Routes>
 
