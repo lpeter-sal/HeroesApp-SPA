@@ -5,8 +5,6 @@ import { useMemo } from "react";
 
 export const HeroPage = () => {
 
-  const env = 'HeroesApp-SPA/'
-
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -29,7 +27,7 @@ export const HeroPage = () => {
     <div className="row mt-5">
       <div className="col-4">
         <img 
-          src={ `${env}/assets/heroes/${ id }.jpg` } 
+          src={ `/assets/heroes/${ id }.jpg` } 
           alt={ hero.superhero }
           className="img-thumbnail animate__animated animate__fadeInLeft" 
         />

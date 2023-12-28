@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeroCard.css';
  
-
-const env = 'HeroesApp-SPA/'
-
 export const HeroCard = ({ 
     id, 
     superhero, 
@@ -17,7 +14,7 @@ export const HeroCard = ({
     return (
         <Link to={`/hero/${id}`} className="my-card animate__animated animate__fadeIn">
 
-            <img src={`${env}/assets/heroes/${id}.jpg`} className="img img-responsive" alt={superhero}/>
+            <img src={`/assets/heroes/${id}.jpg`} className="img img-responsive" alt={superhero}/>
 
             <div className="profile-name">{superhero}</div>
             <div className="profile-position">{alter_ego}</div>
