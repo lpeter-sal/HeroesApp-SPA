@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext";
 
-
+import style from './LoginPage.module.css'
 
 
 export const LoginPage = () => {
@@ -16,7 +16,7 @@ export const LoginPage = () => {
 
     const lastPath = localStorage.getItem('lastPath') || '/';
 
-    login('Usuario con Acceso');
+    login('Bienvenido');
 
     navigate(lastPath, {
       replace: true
@@ -26,17 +26,29 @@ export const LoginPage = () => {
 
 
   return (
-    <div className="container mt-5">
-      <h1>Login</h1>
-      <hr />
+    <body className={style.bodyLogin}>
+      <div className={style.wrapper}>
+        <div className={style.fromWrapper}>
+          <form action="">
+            <h2 className={style.h2Style}> Login </h2>
+            <div className={style.inputGroup}>
+                <input className={style.inputGroupInput} type="text" disabled />
+                <label className={style.inputGroupLabel}> Presiona en login para iniciar sesion</label>
+            </div>
 
-      <button
-          className="btn btn-primary"
-          onClick={ onLogin }
-      >
-        Login
-      </button>
+            <button
+              className={style.btnCustom}
+              onClick={ onLogin }
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
 
-    </div>
+
+
+
+    </body>
   )
 }
