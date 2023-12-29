@@ -23,10 +23,6 @@ export const SearchPage = () => {
 
 
 
-
-
-
-
   const onSearchSumit = (event) => {
     event.preventDefault();
 
@@ -44,7 +40,7 @@ export const SearchPage = () => {
           <h4>Searching</h4>
           <hr />
 
-          <form onSubmit={ onSearchSumit }>
+          <form onSubmit={ onSearchSumit } aria-label="form">
             <input 
                 type="text"
                 placeholder="Search a hero" 
@@ -67,11 +63,13 @@ export const SearchPage = () => {
           <hr />
 
           <div className="alert alert-primary animate__animated animate__fadeIn" 
+               aria-label="alert-primary"
                style={{ display: showSearch ? '' : 'none'}}>
             Search a hero
           </div>
 
           <div className="alert alert-danger animate__animated animate__fadeIn" 
+               aria-label="alert-danger"
                style={{ display: showError ? '' : 'none'}}>
             No hero with <b>{ q }</b>
           </div>

@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext";
+import style from './LoginPage.module.css';
 
-import style from './LoginPage.module.css'
 
 
 export const LoginPage = () => {
@@ -26,7 +26,7 @@ export const LoginPage = () => {
 
 
   return (
-    <body className={style.bodyLogin}>
+    <div className={style.container}>
       <div className={style.wrapper}>
         <div className={style.fromWrapper}>
           <form action="">
@@ -45,10 +45,6 @@ export const LoginPage = () => {
           </form>
         </div>
       </div>
-
-
-
-
-    </body>
+    </div>
   )
 }
